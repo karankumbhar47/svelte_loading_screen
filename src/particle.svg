@@ -1,0 +1,61 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define a radial gradient for the glowing effect -->
+  <defs>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:yellow;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Create multiple ellipses forming a rough circle -->
+  <ellipse cx="80" cy="70" rx="30" ry="20" fill="url(#glowGradient)">
+    <animate
+      attributeName="rx"
+      values="30;35;30"
+      dur="1s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="fill"
+      values="url(#glowGradient);url(#glowGradient2);url(#glowGradient)"
+      dur="1s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+  </ellipse>
+
+  <ellipse cx="120" cy="70" rx="25" ry="15" fill="url(#glowGradient)">
+    <animate
+      attributeName="rx"
+      values="25;30;25"
+      dur="1.2s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="fill"
+      values="url(#glowGradient);url(#glowGradient2);url(#glowGradient)"
+      dur="1.2s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+  </ellipse>
+
+  <ellipse cx="100" cy="110" rx="20" ry="12" fill="url(#glowGradient)">
+    <animate
+      attributeName="rx"
+      values="20;22;20"
+      dur="1.5s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="fill"
+      values="url(#glowGradient);url(#glowGradient2);url(#glowGradient)"
+      dur="1.5s"
+      keyTimes="0;0.5;1"
+      repeatCount="indefinite"
+    />
+  </ellipse>
+</svg>
