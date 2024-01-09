@@ -3,22 +3,12 @@
 	export let name;
 	import HexagonalProgressBar from "./HexagonalProgressBar.svelte";
 	import ParticleEffect from "./ParticleEffect.svelte";
-
-	onMount(() => {
-		console.log(heroElement);
-		loaded = true;
-	});
-
-	let heroElement;
-	let loaded = false;
 </script>
 
-<main id="effect" bind:this={heroElement}>
+<main>
 	<HexagonalProgressBar />
+	<ParticleEffect />
 </main>
-{#if loaded}
-	<ParticleEffect bind:el={heroElement} />
-{/if}
 
 <style>
 	main {
@@ -41,3 +31,4 @@
 		}
 	}
 </style>
+  
