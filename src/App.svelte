@@ -2,12 +2,10 @@
 	import { onMount } from "svelte";
 	export let name;
 	import HexagonalProgressBar from "./HexagonalProgressBar.svelte";
-	import ParticleEffect from "./ParticleEffect.svelte";
 </script>
 
 <main>
 	<HexagonalProgressBar />
-	<ParticleEffect />
 </main>
 
 <style>
@@ -28,7 +26,9 @@
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
+			background-color: black;
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>
-  

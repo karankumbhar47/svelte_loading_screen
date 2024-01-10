@@ -2,6 +2,8 @@
 
 <script>
     import { onMount, onDestroy } from "svelte";
+    export let xCor;
+    
 
     let flakes = [];
 
@@ -68,8 +70,13 @@
                 this._node.style["MozTransform"] = transform;
                 this._node.style["OTransform"] = transform;
                 this._node.style["transform"] = transform;
-                this._node.style.background = "#FFFFFF";
+                this._node.style.background = "Yellow";
                 this._node.style.zIndex = 100000;
+                this._node.style.position = "absolute";
+                this._node.style.height = "0.25rem";
+                this._node.style.width = "0.25rem";
+                this._node.color = "Yellow";
+
 
             },
         };
@@ -94,7 +101,7 @@
                 flake = flakes[i];
                 flake.update();
             }
-
+            
             // next tick
             requestAnimationFrame(function () {
                 tick();
@@ -116,7 +123,9 @@
     });
 </script>
 
-<div class="orb"></div>
+<div class="orb">
+    <div class="flake"></div>
+</div>
 
 <style>
     @keyframes glow {
@@ -187,6 +196,7 @@
         margin-top: -0.125rem;
         margin-left: -0.125rem;
         border-radius: 50%;
+        border: 3px solid white;
         box-shadow:
             0 0 20px #f6ffe1,
             0 0 10px #f6ffe1;
